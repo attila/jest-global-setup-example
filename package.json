@@ -1,0 +1,26 @@
+{
+  "name": "jest-global-setup-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ./src/server",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "jest": "^27.0.5",
+    "jest-environment-node": "^27.0.5"
+  },
+  "jest": {
+    "globalSetup": "<rootDir>/test/setup.js",
+    "globalTeardown": "<rootDir>/test/teardown.js",
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/test/**/?(*.)spec.js"
+    ]
+  }
+}
